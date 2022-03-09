@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ESu-id-1qE">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scan-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeVC" customModule="ScannerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EiS-UZ-A7E">
+                                <rect key="frame" x="0.0" y="779" width="414" height="29"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="h12-Xm-OlO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="779"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MYi-e8-Fch">
+                                <rect key="frame" x="207" y="784" width="0.0" height="0.0"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YbB-Jc-eXe">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="0bN-k7-wpG"/>
+                                            <constraint firstAttribute="height" constant="50" id="Pbf-eV-bdS"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Share"/>
+                                        <connections>
+                                            <action selector="btnShare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pA9-yP-dpN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h12-Xm-OlO" secondAttribute="trailing" id="5m4-of-hrS"/>
+                            <constraint firstItem="MYi-e8-Fch" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="10" id="FHQ-vP-ypf"/>
+                            <constraint firstItem="EiS-UZ-A7E" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GF6-kk-uuI"/>
+                            <constraint firstItem="h12-Xm-OlO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Jrz-Gw-urd"/>
+                            <constraint firstAttribute="bottom" secondItem="EiS-UZ-A7E" secondAttribute="bottom" id="KmJ-zX-DBP"/>
+                            <constraint firstItem="EiS-UZ-A7E" firstAttribute="top" secondItem="h12-Xm-OlO" secondAttribute="bottom" id="Pds-3b-p3Y"/>
+                            <constraint firstItem="EiS-UZ-A7E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RQK-1c-CZ3"/>
+                            <constraint firstItem="MYi-e8-Fch" firstAttribute="top" secondItem="h12-Xm-OlO" secondAttribute="bottom" constant="5" id="Zeg-Es-MAI"/>
+                            <constraint firstItem="MYi-e8-Fch" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nZ2-TW-s2r"/>
+                            <constraint firstItem="h12-Xm-OlO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vUq-Se-E7h"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Scan" id="3Dg-Qy-A0F">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="camera" id="Min-HB-S2c">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="btnCameraTap:" destination="BYZ-38-t0r" id="zWN-LI-kp2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnShare" destination="YbB-Jc-eXe" id="zon-da-z8l"/>
+                        <outlet property="tblScanDocumentList" destination="h12-Xm-OlO" id="wIL-Zk-L2N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="897.10144927536237" y="26.785714285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jLx-8J-Fnx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ESu-id-1qE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="fk6-8j-Y9H">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="systemIndigoColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                            <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DzH-cS-t8w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Br5-ik-fVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13.043478260869566" y="26.785714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
